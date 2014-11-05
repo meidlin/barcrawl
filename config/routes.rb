@@ -1,4 +1,56 @@
 Rails.application.routes.draw do
+  get 'groups/show'
+
+  get 'groups/edit'
+
+  get 'groups/destroy'
+
+  get 'groups/update'
+
+  get 'groups/index'
+
+  get 'groups/new'
+
+  get 'events/show'
+
+  get 'events/edit'
+
+  get 'events/destroy'
+
+  get 'events/update'
+
+  get 'events/create'
+
+  get 'events/index'
+
+  get 'events/new'
+
+  get 'bars/show'
+
+  get 'bars/edit'
+
+  get 'bars/update'
+
+  get 'bars/create'
+
+  get 'bars/index'
+
+  get 'bars/new'
+
+  get 'bars/destroy'
+
+  get 'users/show'
+
+  get 'users/edit'
+
+  get 'users/update'
+
+  get 'users/create'
+
+  get 'users/index'
+
+  get 'users/new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
