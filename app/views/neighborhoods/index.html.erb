@@ -1,0 +1,14 @@
+<h1>Neighborhoods#index</h1>
+<p>Find me in app/views/neighborhoods/index.html.erb</p>
+
+ <h1>List of neighborhoods</h1>
+    <ul>
+        <% @neighborhoods.each do |n| %>
+            <li>
+                <strong> <%= n.title %> </strong>
+                <%= n.description %> 
+                <%= n.id %> 
+                <%= link_to "More details", neighborhood_path(n) %>
+            </li>
+        <% end %>
+    </ul>

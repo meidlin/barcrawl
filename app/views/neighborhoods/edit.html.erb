@@ -1,0 +1,10 @@
+<h1> Edit this Neighborhood! </h1>
+
+    <%= form_for @neighborhood do |f| %>
+        Title: <%= f.text_field :title %>
+        Description: <%= f.text_field :description %>
+
+        <%= f.submit "Edit Neighborhood!" %>
+    <% end %>
+
+    <%= link_to "Back to the list!", neighborhoods_path %>

@@ -1,0 +1,39 @@
+<div class="welcomebanner">
+	<br>
+	<h1> barcrawl.io</h1>
+	<p>basically, plan and enjoy barcrawls with ease. </p>
+</div>
+
+<!-- Barcrawls -->
+<div class="neighborhoods">
+<h1>Neighborhoods</h1>
+<p>Explore one of these neighborhoods</p>
+</div>
+
+<div class="nh_wrapper">
+<!-- Venice -->
+<%= link_to('#') do %>
+	<div class="col-md-4 venice" >
+  		<h1 class="row"> Venice</h1>
+	</div>
+<% end %>
+<!-- Santa Monica -->
+<%= link_to('#') do %>
+	<div class="col-md-4 santamonica" >
+  		<h1 class="row"> Santa Monica</h1>
+	</div>
+<% end %>
+<!-- West Hollywood -->
+<%= link_to('#') do %>
+	<div class="col-md-4 weho" >
+  		<h1 class="row"> West Hollywood</h1>
+	</div>
+<% end %>
+
+<br>
+
+<div class="newcrawl">
+<h1>Create your crawl</h1>
+<p><%= link_to('Lets do this.', '/events/new', :class => 'btn btn-large btn-primary btn-block')  %></p>
+</div>
+

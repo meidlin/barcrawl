@@ -1,0 +1,10 @@
+<h1> Add a new neighborhood! </h1>
+
+    <%= form_for @neighborhood do |f| %>
+        Title: <%= f.text_field :title %>
+        Description: <%= f.text_field :description %>
+        <%= f.submit "Add Neighborhood!" %>
+
+    <% end %>
+
+    <%= link_to "Back to the list!", neighborhoods_path %>

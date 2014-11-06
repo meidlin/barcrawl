@@ -1,0 +1,70 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Place all the styles related to the dashboards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+}
+
+// Welcome Banner
+
+.welcomebanner{
+	text-align:center;
+	background-image: url('banner.jpg');
+	height: 140px;
+	margin-top: 30px;
+	color:white; 
+}
+
+.welcomebanner h1{
+}
+
+.welcomebanner p{
+	font-size:16px;
+}
+
+// Neighborhoods
+
+.neighborhoods{
+	text-align:center;
+}
+
+.col-md-4{
+	height: 200px;
+	text-align:center;
+	border: 1px solid black;
+	background-position:center;
+	color:white;
+}
+
+// Neighborhoods
+.col-md-4.venice{
+	background-image:url('venice.jpg');
+	background-size:cover;
+	background-repeat: none;
+	border: 1px solid black;
+}
+
+.col-md-4.santamonica{
+	background-image:url('sm.jpg');
+	background-size:cover;
+	background-repeat: none;
+	border: 1px solid black;
+}
+
+.col-md-4.weho{
+	background-image:url('weho.jpg');
+	background-size:cover;
+	background-repeat: none;
+	border: 1px solid black;
+}
+
+// Create your crawl
+.newcrawl{
+	text-align:center;
+	width:400px;
+	margin:0 auto;
+}
+

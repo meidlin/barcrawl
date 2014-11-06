@@ -1,2 +1,16 @@
-<h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
+<div class="listofevents" "col-md-4">
+		<h2> Events</h2>
+		<% @events.each do |e| %>
+			<%= e.title %>
+			<br>
+			<% end %>
+			
+
+			<hr>
+
+
+		<h2> Groups</h2>	
+		<% @groups.each do |g| %> 
+		<%= g.title %>
+		<% end %>
+	</div>

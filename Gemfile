@@ -16,6 +16,23 @@ gem 'mongoid'
 
 gem 'bootstrap-sass', '~> 3.2.0'
 
+gem 'httparty'
+
+gem 'yelp', require: 'yelp'
+
+gem 'better_errors'
+
+gem 'bootstrap_form'
+
+group :test, :development do
+	gem 'mongoid-rspec'
+	gem 'rspec-rails'
+	# Initialize the spec/ directory (where specs will reside) with:
+	# rails generate rspec:install
+	gem 'pry-rails'
+	# place 'binding.pry' anywhere and get dropped into a pry prompt...explore your vars and methods,etc
+end
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -39,4 +56,7 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Use ActiveModel has_secure_password
+gem 'bcrypt', '~> 3.1.7'
 

@@ -1,2 +1,22 @@
-<h1>Events#new</h1>
-<p>Find me in app/views/events/new.html.erb</p>
+<h1> Create a new event! </h1> 
+<div class="neweventwrapper col-md-12">
+
+	<div class="neweventform col-md-4">
+	<%= bootstrap_form_for @event do |f| %>
+		<%= f.text_field :title, placeholder: "Title of your event" %>
+		<%= f.text_field :date, placeholder: "When is the event happening?" %> 
+		<%= f.text_area :description, placeholder: "Describe to your guests your event" %>
+		<%= f.text_field :location, placeholder: "Where is your event happening?" %>
+		<div class="neweventmap">
+		</div>
+		<%= f.submit "Add Event!", :class => "btn btn-default" %>
+	<% end %> 
+	</div>
+
+	<div class="calendar col-md-6"></div>
+</div>
+	
+
+
+<%= link_to "Back to Events!", events_path %>
+

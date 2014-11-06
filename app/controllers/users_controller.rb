@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   end
 
   def index
+    @users = User.all
   end
 
   def new
@@ -19,5 +20,5 @@ class UsersController < ApplicationController
 
   def destroy
   end
-  
+
 end

@@ -1,15 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Barcrawl</title>
-	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+  <title>Kickball</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body>
+<!--Nav Bar -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+    </div>
+      <ul class="nav navbar-nav">
+        <li><a href="#"></a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <a href="/events/new" class="btn btn-primary navbar-btn" role="button">Create an Event! </a>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Profile <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><%= link_to "My Profile", current_user %></li>
+            <li><a href="#">Settings</a></li>
+            <li class="divider"></li>
+            <li><%= link_to "Log Out", sessions_path, method: :delete %></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> 
+
+  <% if current_user %>
+  <%= current_user.email %> <%= link_to "Sign out", sessions_path, method: :delete %>
+  <% else %>
+  <%= link_to "Sign up", new_user_path, method: :get %>
+  <%= link_to "Sign in", current_user, method: :get %>
+
+  <% end %>
+
+
+
+
 
 <%= yield %>
 
