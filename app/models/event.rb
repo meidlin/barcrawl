@@ -5,3 +5,4 @@ class Event
   field :description, type: String
   field :location, type: String
 end
+
