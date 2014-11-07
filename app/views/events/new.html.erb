@@ -1,22 +1,48 @@
+<br>
+<br>
 <h1> Create a new event! </h1> 
-<div class="neweventwrapper col-md-12">
+	<div class="superwrapper col-md-12">
+		<div class="neweventform col-md-6">
+		<%= bootstrap_form_for @event do |f| %>
+			<%= f.text_field :title, placeholder: "Title of your event" %>
+			<%= f.text_field :date, placeholder: "When is the event happening?" %> 
+			<%= f.text_field :time, placeholder: "When will your event start and end?" %>
+			<%= f.text_area :description, placeholder: "Describe to your guests your event" %>
+	<hr>
+	<!-- Neighborhoods, ON CLICK IT WILL LOAD GMAPS OR YELP OR GPLACES WITH BARS IN THAT AREA. SEARCH(BARS & SM || BARS & VENICE || BARS & WEHO -->
+			<strong><p>Which neighborhood?</p></strong>
+			<%= check_box_tag(:location) %>
+				<%= label_tag(:location, "Venice") %>
+			<%= check_box_tag(:location) %>
+				<%= label_tag(:location, "Santa Monica") %>
+			<%= check_box_tag(:location) %>
+				<%= label_tag(:location, "WeHo") %>
+	<hr>
+	<!-- Bars, Locations which wil be initialized through YELP/ GMAPS/ GPLACES -->
+			<%= f.text_field :start, placeholder: "Where is your event happening?" %>
+			<%= f.text_field :bar1, placeholder: "Where is bar 1?" %>
+			<%= f.text_field :bar2, placeholder: "Where is bar 2?" %>
+			<%= f.text_field :bar3, placeholder: "Where is bar 3?" %>
+			<%= f.text_field :bar4, placeholder: "Where is bar 4?" %>
+			<%= f.text_field :afterparty, placeholder: "Where is your after party?" %>
+			<%= f.submit "Add Event", :class => "btn btn-primary" %>
+			<%= link_to "Back", welcome_dashboard_path, :class => "btn btn-default"%>
+		<% end %> 
 
-	<div class="neweventform col-md-4">
-	<%= bootstrap_form_for @event do |f| %>
-		<%= f.text_field :title, placeholder: "Title of your event" %>
-		<%= f.text_field :date, placeholder: "When is the event happening?" %> 
-		<%= f.text_area :description, placeholder: "Describe to your guests your event" %>
-		<%= f.text_field :location, placeholder: "Where is your event happening?" %>
-		<div class="neweventmap">
-		</div>
-		<%= f.submit "Add Event!", :class => "btn btn-default" %>
-	<% end %> 
 	</div>
 
-	<div class="calendar col-md-6"></div>
+	<div class="yelpinfo col-md-6">
+		<h1>Yelp populates with bars in selected neighborhood</h1>
+	</div>
+
+	<div class="maps col-md-6">
+		<h1>Gmap where each bar you select will drop pin down</h1>
+	</div>
+
 </div>
 	
 
 
-<%= link_to "Back to Events!", events_path %>
+
+
 

@@ -2,28 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 // New Event Page
-.neweventwrapper{
-	clear:both;
-	height: 600px;	
+
+.superwrapper{
+	border: 1px solid red;
 }
 
 .neweventform{
-
-	height: 600px;
-
-
-}
-
-.neweventmap{
-	height: 200px;
-	border: 1px black solid;
-	background-size:100%;
-
-}
-
-.calendar{
-	height:600px;
 	border: 1px solid black;
+}
+
+.maps{
+	border: 1px solid green;
+	height: 500px;
+}
+
+.yelpinfo{
+	border: 1px solid orange;
+	height: 400px;
 }
 
 
