@@ -18,7 +18,8 @@ class EventsController < ApplicationController
 # Read
   def show
     @event = Event.find(params[:id])
-    @group = Group.find(params[:id])
+    @events = Event.all
+    # @group = Group.find(params[:id])
   end
 
   def index

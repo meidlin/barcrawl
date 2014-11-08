@@ -19,13 +19,13 @@
 
 <div class="nh_wrapper">
 <!-- Venice -->
-<a href="#" data-attribute="venice" data-lat="8787" data-long="3434335">
+<a href="/neighborhoods/545b03114d696b4750050000" data-attribute="venice" data-lat="33.9908" data-long="-118.4592">
 	<div class="col-md-4 venice" >
   		<h1 class="row"> Venice</h1>
 	</div>
 </a>
 <!-- Santa Monica -->
-<%= link_to('#') do %>
+<%= link_to('/neighborhoods/545b031e4d696b4750060000') do %>
 	<div class="col-md-4 santamonica" >
   		<h1 class="row"> Santa Monica</h1>
 	</div>
@@ -43,6 +43,9 @@
 <h1>Create your crawl</h1>
 <p><%= link_to('Lets do this.', '/events/new', :class => 'btn btn-large btn-primary btn-block')  %></p>
 </div>
+
+<body onload="initialize(34.0500, -118.2500)">
+
 
 <!-- Google Maps Styling -->
   <style type="text/css">
@@ -86,8 +89,6 @@ var getlatlong = element.getAttribute(attributeName);
       service.nearbySearch(request, callback);
     }
 
-
-
     function callback(results, status) {
       if (status != google.maps.places.PlacesServiceStatus.OK) {
         alert(status);
@@ -98,6 +99,10 @@ var getlatlong = element.getAttribute(attributeName);
           map: map,
           position: result.geometry.location
         });
+        google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent(place.name);
+        infowindow.open(map, this);
+      });
       }
     }
 
@@ -107,7 +112,9 @@ var getlatlong = element.getAttribute(attributeName);
 
           //recall our intialize function , to basically reload the map, replace var location, with lat long of new location
 
-    })
+    });
+
+
 
     </script>
 </body>

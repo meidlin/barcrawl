@@ -1,2 +1,96 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<div class="container">
+    <div class="page-header">
+        <h1 id="timeline">Event Title should show up here<% @event.title %></h1>
+    </div>
+    <ul class="timeline">
+
+    	<% @event.title %>
+    	
+        <li>
+          <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title"><% @event.bar1 %></h4>
+              <p><small class="text-muted"> Bar1 info</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>bar1 description from google places or yelp</p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title"><% @event.bar2 %> </h4>
+              <p><small class="text-muted"> Bar2 info</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>bar2 description from google places or yelp</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title"><% @event.bar3 %> </h4>
+              <p><small class="text-muted"> Bar3 info</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>bar2 description from google places or yelp</p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title"> <% @event.bar4 %> </h4>
+              <p><small class="text-muted"> Bar4 info</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>bar4 description from google places or yelp</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge info"><i class="glyphicon glyphicon-floppy-disk"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title"> <% @event.bar5 %> </h4>
+              <p><small class="text-muted"> Bar5 info</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>bar5 description from google places or yelp.</p>
+             <!-- 
+              <hr>
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                  <i class="glyphicon glyphicon-cog"></i> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div> -->
+            </div>
+          </div>
+        </li>
+        
+        <li class="timeline-inverted">
+          <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">AFTERPARTY!!</h4>
+               <p><small class="text-muted"> Bar5 info</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>AFTERPARTY DESCRIPTION</p>
+            </div>
+          </div>
+        </li>
+    </ul>
+</div>

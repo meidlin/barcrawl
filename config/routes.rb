@@ -41,7 +41,23 @@ Rails.application.routes.draw do
 # Groups
   resources :groups
 # Events
-  resources :events
+  get 'events/new' => 'events#new'
+
+  post 'events/' => 'events#create'
+
+  get 'events/:id' => 'events#show', as: :event
+
+  get 'events/' => 'events#index'
+
+  get 'events/show'
+
+  get 'events/:id/edit' => 'events#edit'
+
+  patch 'events/:id' => 'events#update'
+
+  delete 'events/:id' => 'events#destroy'
+
+  get 'events/create'
 # Bars
 
   get 'bars' => 'bars#index', as: :bars

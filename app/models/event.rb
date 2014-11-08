@@ -9,6 +9,7 @@ class Event
   field :bar2, type: String
   field :bar3, type: String
   field :bar4, type: String
+  field :bar5, type: String
   field :afterparty, type: String
 end
 
