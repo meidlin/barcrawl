@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+events = Event.create([{ title: 'GA Barcrawl', time: 'tomorrow!', description: 'We graduated so we will party with water', start: 'GA campus', bar1: 'Beanery', bar2: 'Shore Hotel', bar3: 'The Victorian', bar4: 'Brick & Mortar', bar5: 'Shorebar', afterparty: 'Your house'}])

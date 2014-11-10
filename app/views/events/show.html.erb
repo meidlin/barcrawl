@@ -1,11 +1,12 @@
 <div class="container">
     <div class="page-header">
-        <h1 id="timeline">Event Title should show up here<% @event.title %></h1>
+       
+        <h1 id="timeline"><%= @event.title %></h1>
+
     </div>
     <ul class="timeline">
+      
 
-    	<% @event.title %>
-    	
         <li>
           <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
           <div class="timeline-panel">
@@ -14,7 +15,7 @@
               <p><small class="text-muted"> Bar1 info</small></p>
             </div>
             <div class="timeline-body">
-              <p>bar1 description from google places or yelp</p>
+              <p>bar1 description from google places or yelp <% @event %> </p>
             </div>
           </div>
         </li>
@@ -22,7 +23,7 @@
           <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
-              <h4 class="timeline-title"><% @event.bar2 %> </h4>
+              <h4 class="timeline-title"><%= @event.bar2 %> </h4>
               <p><small class="text-muted"> Bar2 info</small></p>
             </div>
             <div class="timeline-body">
@@ -34,7 +35,7 @@
           <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
-              <h4 class="timeline-title"><% @event.bar3 %> </h4>
+              <h4 class="timeline-title"><%= @event.bar3 %> </h4>
               <p><small class="text-muted"> Bar3 info</small></p>
             </div>
             <div class="timeline-body">
@@ -45,7 +46,7 @@
         <li class="timeline-inverted">
           <div class="timeline-panel">
             <div class="timeline-heading">
-              <h4 class="timeline-title"> <% @event.bar4 %> </h4>
+              <h4 class="timeline-title"> <%= @event.bar4 %> </h4>
               <p><small class="text-muted"> Bar4 info</small></p>
             </div>
             <div class="timeline-body">
@@ -57,7 +58,7 @@
           <div class="timeline-badge info"><i class="glyphicon glyphicon-floppy-disk"></i></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
-              <h4 class="timeline-title"> <% @event.bar5 %> </h4>
+              <h4 class="timeline-title"> <%= @event.bar5 %> </h4>
               <p><small class="text-muted"> Bar5 info</small></p>
             </div>
             <div class="timeline-body">
@@ -84,7 +85,7 @@
           <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
-              <h4 class="timeline-title">AFTERPARTY!!</h4>
+              <h4 class="timeline-title"><%= @event.afterparty %></h4>
                <p><small class="text-muted"> Bar5 info</small></p>
             </div>
             <div class="timeline-body">
@@ -93,4 +94,5 @@
           </div>
         </li>
     </ul>
+
 </div>

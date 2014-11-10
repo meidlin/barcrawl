@@ -6,83 +6,87 @@
 
 <%= link_to "Back to the list!", neighborhoods_path %>
 
-<%= link_to "Delete this neighbrohood!", :neighborhood, method: :delete, data: { confirm: 'Are you sure you want to delete it?' } %>
 
 <body onload="initialize(33.9908, -118.4592)">
 
 
 <!-- Google Maps Styling -->
-  <style type="text/css">
-      html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
-    </style>
-    
+ 
 </head>
 <body>
-
-<div id="map-canvas" style="width: 100%;height: 500px;"> </div>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
-    <script> 
-    var map;
-    var service;
-    var infowindow;
-
-
-var getlatlong = element.getAttribute(attributeName);
-
-    ///create an event handler that will call this function when the DOM content is ready 
-  // this is event listener 
-  document.addEventListener("DOMContentLoaded", function() {
-    initialize(latitude,longitude);
-  });
-    // as soon as html is ready, call this functino and load my map up.. the functino is stored in memory, and it can be called at will,aka when one of those links gets clicked. 
-   function initialize(latitude,longitude) {
-      var location = new google.maps.LatLng(latitude, longitude);
-
-      map = new google.maps.Map(document.getElementById('map-canvas'), {
-          center: location,
-          zoom: 14
-        });
-
-      var request = {
-        location: location,
-        radius: '2000',
-        types: ['bar']
-      };
-
-      service = new google.maps.places.PlacesService(map);
-      service.nearbySearch(request, callback);
-    }
+<div class="neighborhoodwrapper"> 
+    <div id="map-canvas" ></div>
+    <div id="iframe">
+    <iframe src="http://localhost:3000/events/"></iframe>
+    </div>
+</div>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+        <script> 
+        var map;
+        var service;
+        var infowindow;
 
 
-var infowindow = new google.maps.InfoWindow();
-var service = new google.maps.places.PlacesService(map);
-    function callback(results, status) {
-      if (status != google.maps.places.PlacesServiceStatus.OK) {
-        alert(status);
-        return;
-      }
-      for (var i = 0, result; result = results[i]; i++) {
-        var marker = new google.maps.Marker({
-          map: map,
-          position: result.geometry.location
-        });
-        google.maps.event.addListener(marker, 'click', function() {
-        infowindow.setContent(place.name);
-        infowindow.open(map, this);
+    var getlatlong = element.getAttribute(attributeName);
+
+        ///create an event handler that will call this function when the DOM content is ready 
+      // this is event listener 
+      document.addEventListener("DOMContentLoaded", function() {
+        initialize(latitude,longitude);
       });
-      }
-    }
+        // as soon as html is ready, call this functino and load my map up.. the functino is stored in memory, and it can be called at will,aka when one of those links gets clicked. 
+       function initialize(latitude,longitude) {
+          var location = new google.maps.LatLng(latitude, longitude);
+
+          map = new google.maps.Map(document.getElementById('map-canvas'), {
+              center: location,
+              zoom: 14
+            });
+
+          var request = {
+            location: location,
+            radius: '2000',
+            types: ['bar']
+          };
+
+          service = new google.maps.places.PlacesService(map);
+          service.nearbySearch(request, callback);
+        }
+
+
+    var infowindow = new google.maps.InfoWindow();
+    var service = new google.maps.places.PlacesService(map);
+        function callback(results, status) {
+          if (status != google.maps.places.PlacesServiceStatus.OK) {
+            alert(status);
+            return;
+          }
+          for (var i = 0, result; result = results[i]; i++) {
+            var marker = new google.maps.Marker({
+              map: map,
+              position: result.geometry.location
+            });
+            google.maps.event.addListener(marker, 'click', function() {
+            infowindow.setContent(place.name);
+            infowindow.open(map, this);
+          });
+          }
+        }
+
+        
+
+        document.getElementById("venice-link").addEventlistner("click",function(){
+
+              //pull data atrributes from venice link
+
+              //recall our intialize function , to basically reload the map, replace var location, with lat long of new location
+
+        })
+
+        </script>
 
     
-
-    document.getElementById("venice-link").addEventlistner("click",function(){
-
-          //pull data atrributes from venice link
-
-          //recall our intialize function , to basically reload the map, replace var location, with lat long of new location
-
-    })
-
-    </script>
 </body>
+
+
 </html>
